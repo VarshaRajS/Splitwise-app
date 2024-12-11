@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+
+        java:
+                build:
+                        context: .
+                container_name: "myapp"
+                networks:
+                        - myntw
+                volumes:
+                        - ./mydata:/var/lib/
+                restart: always
+
+networks:
+        myntw:
+
+volumes:
+        mydata:
